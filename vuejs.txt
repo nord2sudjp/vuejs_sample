@@ -1,0 +1,11 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+     user: {
+        lastName: 'Yamada',
+        firstName: 'Taro',
+        prefecture: 'Tokyo'
+     },
+     colors: ['Red', 'Green', 'Blue']
+
+
+

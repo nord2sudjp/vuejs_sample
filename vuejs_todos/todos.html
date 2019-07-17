@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<link rel='stylesheet' href='./todos.css' type='text/css' media='all' />
+
+</head>
+<body>
+<div id="app">
+  <h2>Todo list</h2>
+  <form v-on:submit.prevent>
+     <input type="text" v-model="newItem"/>
+     <button v-on:click="addItem">
+     Add
+     </button>
+  </form>
+  <ul>
+     <li v-for="(todo, index) in todos">
+        <input type="checkbox" v-model="todo.isDone">
+        <span v-bind:class="{ done: todo.isDone}">{{ todo.item }}</span>
+        <button v-on:click="deleteItem(index)">Delete</button>
+     </li>
+  </ul>
+  {{todos}}
+ </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./todos.js"></script>
+</body>
+</html>
